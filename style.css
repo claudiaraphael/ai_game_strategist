@@ -5,16 +5,18 @@
     border: 2px solid red;
 }
 
-body *, 
-:root {
+body {
   font-family: "JetBrains Mono", monospace;
-  line-height: 160%;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  border: 1px solid red;
-  margin: 0;
-  
+  background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    /* keyword */
+    background-size: 100% auto;
+    /* width height */
+    background-position: top center;
+    /* vertical horizontal */
+    background-color: #121214;
+    /* HEX: RR, GG, BB */
+    color: white;
 
 }
 
@@ -25,7 +27,7 @@ header {
 }
 
 header img {
-    width: 15rem;
+    width: 25rem;
 }
 
 h2 {
@@ -41,25 +43,51 @@ main {
     max-width: 36rem;
     margin: 3rem auto;
     padding: 16px;
-
 }
 
 section {
-    padding: 24px;
-    border-radius: 24px;
-    background-color: #202024;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50%, #ff6ec4 100%); /* os graus (degrees == deg) determinam a direção do gradiente */
+    padding: 5px;
+    border-radius: 0.5rem;
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
-    margin-bottom: 24px;
 }
 
+section > div {
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    background-color: #2a2634;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
 
-body {
-    background-image: url("./assets/bg.jpg");
-    background-size: 100% auto; /* width height */
-    background-position: top center; /* vertical (y) horizontal(x) */
-    background-repeat: repeat; /* keyword*/
-    color: white;
-} 
+section > div h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    color: #a1a1aa;
+    letter-spacing: -0.2px;
+    font-size: 0.93rem;
+}
+
+/* ANIMACOES */
+main section {
+    opacity: 1;
+    transform: translateY(-2rem);
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Regra com @ */
+@keyframes appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+   
+}
+
 
 
 /* BOX-MODEL 
